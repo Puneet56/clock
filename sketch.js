@@ -35,20 +35,21 @@ function draw() {
 	pop();
 
 	push();
-	rotate(30);
-	rotate((hours * 360) / 60);
-	line(0, 0, 0, -185);
-	triangle(-5, -185, 0, -195, 5, -185);
+	rotate((hours + minutes / 60) * 30);
+	line(0, 0, 0, -175);
+	fill(255, 0, 0);
+	triangle(-5, -175, 0, -185, 5, -175);
 	pop();
 
 	push();
 	rotate((minutes * 360) / 60);
 	line(0, 0, 0, -190);
+	fill(0, 255, 0);
 	triangle(-5, -190, 0, -200, 5, -190);
 	pop();
 
 	push();
-	rotate((seconds * 360) / 60);
+	rotate(seconds * 6);
 	line(0, 0, 0, -210);
 	triangle(-5, -200, 0, -210, 5, -200);
 	pop();
